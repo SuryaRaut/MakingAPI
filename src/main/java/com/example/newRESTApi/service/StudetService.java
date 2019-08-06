@@ -5,7 +5,6 @@ import com.example.newRESTApi.repository.StudenRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -38,7 +37,7 @@ public class StudetService {
 
     }
 
-    public List<Student> getAllInfo(){
-        return (List<Student>) repo.findAll();
+    public Iterable<Student> getAllInfo(){
+        return repo.findAll();
     }
 }
